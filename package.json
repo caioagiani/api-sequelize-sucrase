@@ -31,7 +31,8 @@
     "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
-    "sequelize": "^5.21.12"
+    "sequelize": "^5.21.12",
+    "yup": "^0.29.1"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
