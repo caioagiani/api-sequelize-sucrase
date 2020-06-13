@@ -24,7 +24,27 @@ class SessionController {
       email,
     });
 
+    user.update({ log: true });
+
     res.json({ user: { id, name, email }, token });
+  }
+
+  async destroy(req, res) {
+    const { tokenId } = req;
+
+    const user = await User.findByPk(tokenId);
+
+    if (!user) {
+      return res.status(400).json({ error: 'Usuário não existe.' });
+    }
+
+    if (!user.log) {
+      return res.status(400).json({ error: 'Usuário não está logado.' });
+    }
+
+    user.update({ log: false });
+
+    return res.json({ message: 'Usuário desconectado com sucesso.' });
   }
 }
 
