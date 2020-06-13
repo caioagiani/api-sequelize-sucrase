@@ -17,11 +17,18 @@ Projeto BackEnd: API RESTful seguindo conceito **MVC** utilizando Stack **NodeJS
 
 Pacotes principais: **Express** responsável pela criação de rotas, Middleware **JWT** para persistência do token por 30minutos, mantendo a segurança e credêncial do usuário, ORM **Sequelize** para conexão com banco de dados relacional (**MySQL**) e por fim, **Jest** para realização de tests.
 
-Rotas mapeada do arquivo exportado Insominia: `Insomnia.json`
+## Instalação:
 
-## Requisitos
+- Instalar dependência: `yarn install` ou `npm install`
+- Iniciar banco de dados: `yarn sequelize db:migrate` ou import `api.sql`
+- Iniciar aplicação em desenvolvimento: `yarn dev`
+- Format eslint: `yarn dev:fix`
+- Buildar sucrase: `yarn dev:build`
+- Iniciar aplicação em produção: `yarn start`
 
-#### Routes
+## Rotas
+
+#### Import insomnia: `Insomnia.json`
 
 - [x] Criar usuário
 
@@ -30,7 +37,7 @@ router.post('/users', UserController.store)
 
 {
      "name": "Caio",
-     "email": "caio@gmail.com",
+     "email": "caio.agiani14@gmail.com",
      "password": "123123"
 }
 ```
@@ -41,7 +48,7 @@ router.post('/users', UserController.store)
 router.post('/users', UserController.store)
 
 {
-     "email": "caio@gmail.com",
+     "email": "caio.agiani14@gmail.com",
      "password": "123123"
 }
 ```
