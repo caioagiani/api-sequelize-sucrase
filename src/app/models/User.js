@@ -35,7 +35,7 @@ class User extends Model {
 
     return sign(
       { ...params, expiresIn: parseInt(expiresSet.getTime()) },
-      process.env.hash
+      process.env.HASH
     );
   }
 }

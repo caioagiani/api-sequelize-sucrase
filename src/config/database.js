@@ -1,9 +1,9 @@
 module.exports = {
-  dialect: process.env.driver,
-  host: process.env.host,
-  username: process.env.user,
-  password: process.env.pass,
-  database: process.env.base,
+  dialect: process.env.DRIVER,
+  host: process.env.HOST,
+  username: process.env.USER,
+  password: process.env.PASS,
+  database: process.env.BASE,
   define: {
     timestamps: true,
     underscored: true,
