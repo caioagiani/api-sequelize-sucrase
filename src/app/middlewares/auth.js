@@ -23,6 +23,6 @@ export default async (req, res, next) => {
 
     return next();
   } catch (error) {
-    return res.status(401).json({ error: 'Não autorizado.' });
+    return res.status(401).json({ error: error.message });
   }
 };

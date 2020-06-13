@@ -1,6 +1,29 @@
 import User from '../models/User';
 
 class UserController {
+  async index(req, res) {
+    const { idUser } = req.params;
+    const { tokenId } = req;
+
+    const user = await User.findByPk(idUser);
+
+    if (!user) {
+      return res.status(400).json({ error: 'Usuário já existe.' });
+    }
+
+    if (user.id !== tokenId) {
+      return res.status(400).json({ error: 'Acesso negado.' });
+    }
+
+    if (!user.log) {
+      return res.status(400).json({ error: 'Necessário estar logado.' });
+    }
+
+    const { id, name, email } = user;
+
+    res.json({ user: { id, name, email } });
+  }
+
   async store(req, res) {
     const { name, email, password } = req.body;
 
@@ -12,7 +35,7 @@ class UserController {
 
     const { id } = await User.create({ name, email, password });
 
-    res.json({ id, email, name });
+    res.json({ id, name, email });
   }
 
   async update(req, res) {
@@ -33,6 +56,10 @@ class UserController {
       return res.status(400).json({ error: 'Senha incorreta.' });
     }
 
+    if (!user.log) {
+      return res.status(400).json({ error: 'Necessário estar logado.' });
+    }
+
     const { id, name } = await user.update(req.body);
 
     const token = user.createToken({
@@ -42,6 +69,29 @@ class UserController {
     });
 
     res.json({ user: { id, name, email }, token });
+  }
+
+  async delete(req, res) {
+    const { idUser } = req.params;
+    const { tokenId } = req;
+
+    const findUser = await User.findByPk(idUser);
+
+    if (!findUser) {
+      return res.status(400).json({ error: 'Usuário não localizado.' });
+    }
+
+    if (findUser.id !== tokenId) {
+      return res.status(400).json({ error: 'Acesso negado.' });
+    }
+
+    if (!findUser.log) {
+      return res.status(400).json({ error: 'Necessário estar logado.' });
+    }
+
+    await findUser.destroy();
+
+    res.json({ mensagem: 'Usuário deletado com sucesso.' });
   }
 }
 

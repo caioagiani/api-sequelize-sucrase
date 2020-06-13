@@ -1,7 +1,7 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2020-06-13T16:54:55.913Z",
+  "__export_date": "2020-06-13T20:04:06.182Z",
   "__export_source": "insomnia.desktop.app:v2020.2.2",
   "resources": [
     {
@@ -23,7 +23,7 @@
       "isPrivate": false,
       "metaSortKey": -1591908628783,
       "method": "POST",
-      "modified": 1592067247163,
+      "modified": 1592076944254,
       "name": "Login",
       "parameters": [],
       "parentId": "fld_c0f3bc5baa4448718b5f9c5ced7709e8",
@@ -59,6 +59,38 @@
       "_type": "workspace"
     },
     {
+      "_id": "req_a01b96fd6f174754a0ff7e720f5c116f",
+      "authentication": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkNhaW8gSGVucmlxdWUgQWdpYW5pIFBpbWVudGEiLCJlbWFpbCI6ImNhaW8uYWdpYW5pMTRAZ21haWwuY29tIiwiZXhwaXJlc0luIjoxNTkyMDgwMjA1ODQwLCJpYXQiOjE1OTIwNzg0MDV9.LU3aTUPGtucKJlbKRrdK4P19o6uB2Zu8H3jUGw3D1h4",
+        "type": "bearer"
+      },
+      "body": { "mimeType": "application/json", "text": "" },
+      "created": 1592078383565,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_a5bd3f1ad7e64b0983000f212bf5fbf3",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1591823997708.125,
+      "method": "GET",
+      "modified": 1592078419402,
+      "name": "Profile",
+      "parameters": [],
+      "parentId": "fld_c0f3bc5baa4448718b5f9c5ced7709e8",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseurl  }}/profile/1",
+      "_type": "request"
+    },
+    {
       "_id": "req_50286d414be14b0cad0c3928f1b4f325",
       "authentication": {},
       "body": {
@@ -75,9 +107,9 @@
         }
       ],
       "isPrivate": false,
-      "metaSortKey": -1591908628733,
+      "metaSortKey": -1591739366633.25,
       "method": "POST",
-      "modified": 1592067215018,
+      "modified": 1592077625302,
       "name": "Create",
       "parameters": [],
       "parentId": "fld_c0f3bc5baa4448718b5f9c5ced7709e8",
@@ -88,6 +120,93 @@
       "settingSendCookies": true,
       "settingStoreCookies": true,
       "url": "{{ baseurl  }}/users",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a4af4519205245dab76c66db84ee91ee",
+      "authentication": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkNhaW8iLCJlbWFpbCI6ImNhaW8uYWdpYW5pMTRAZ21haWwuY29tIiwiZXhwaXJlc0luIjoxNTkyMDc5NjI3MDQ5LCJpYXQiOjE1OTIwNzc4Mjd9.3DLF1xcC72-U3IIr2cT0gncIlMRCkuFXldKBpiqomz0",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Caio Henrique Agiani Pimenta\",\n\t\"email\": \"caio.agiani14@gmail.com\",\n\t\"oldPassword\": \"123123\",\n\t\"password\": \"123123\"\n}"
+      },
+      "created": 1592069496487,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_3018bf46f2b24556bd168e0f0291897d",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1591654735608.375,
+      "method": "PUT",
+      "modified": 1592077869543,
+      "name": "Update",
+      "parameters": [],
+      "parentId": "fld_c0f3bc5baa4448718b5f9c5ced7709e8",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseurl  }}/users",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ab60f71ae80e4e4098250cb619bbf06e",
+      "authentication": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkNhaW8gSGVucmlxdWUgQWdpYW5pIFBpbWVudGEiLCJlbWFpbCI6ImNhaW8uYWdpYW5pMTRAZ21haWwuY29tIiwiZXhwaXJlc0luIjoxNTkyMDc5ODQyNDg5LCJpYXQiOjE1OTIwNzgwNDJ9.jyQzQQuihalRY7N1mfabDyxpK-PcfA4bw2VOdLll_aQ",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1592074913674,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1591570104583.5,
+      "method": "DELETE",
+      "modified": 1592078086369,
+      "name": "Delete",
+      "parameters": [],
+      "parentId": "fld_c0f3bc5baa4448718b5f9c5ced7709e8",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseurl  }}/users/1",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b8ed3440264c4564b49efcd8e4128797",
+      "authentication": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkNhaW8gSGVucmlxdWUgQWdpYW5pIFBpbWVudGEiLCJlbWFpbCI6ImNhaW8uYWdpYW5pMTRAZ21haWwuY29tIiwiZXhwaXJlc0luIjoxNTkyMDc5ODQyNDg5LCJpYXQiOjE1OTIwNzgwNDJ9.jyQzQQuihalRY7N1mfabDyxpK-PcfA4bw2VOdLll_aQ",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1592076159207,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1591400842533.75,
+      "method": "GET",
+      "modified": 1592078077824,
+      "name": "Logout",
+      "parameters": [],
+      "parentId": "fld_c0f3bc5baa4448718b5f9c5ced7709e8",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseurl  }}/logout",
       "_type": "request"
     },
     {

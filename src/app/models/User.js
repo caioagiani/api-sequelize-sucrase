@@ -10,6 +10,7 @@ class User extends Model {
         email: Sequelize.STRING,
         password: Sequelize.VIRTUAL,
         password_hash: Sequelize.STRING,
+        log: Sequelize.BOOLEAN,
       },
       {
         sequelize,
@@ -31,12 +32,12 @@ class User extends Model {
 
   createToken(params = {}) {
     const expiresSet = new Date(Date.now());
+
     expiresSet.setMinutes(expiresSet.getMinutes() + 30);
 
-    return sign(
-      { ...params, expiresIn: parseInt(expiresSet.getTime()) },
-      process.env.HASH
-    );
+    const time = parseInt(expiresSet.getTime());
+
+    return sign({ ...params, expiresIn: time }, process.env.HASH);
   }
 }
 

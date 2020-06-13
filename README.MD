@@ -13,7 +13,7 @@
 
 ## Apresentação:
 
-Projeto BackEnd: API RESTful seguindo conceito **MVC** utilizando Stack **NodeJS**, padronizado o código com **Eslint** e **Prettier**.
+Projeto **CRUD** Backend: API RESTful seguindo conceito **MVC** utilizando Stack **NodeJS**, padronizado o código com **Eslint** e **Prettier**.
 
 Pacotes principais: **Express** responsável pela criação de rotas, Middleware **JWT** para persistência do token por 30minutos, mantendo a segurança e credêncial do usuário, ORM **Sequelize** para conexão com banco de dados relacional (**MySQL**) e por fim, **Jest** para realização de tests.
 
@@ -53,17 +53,35 @@ router.post('/users', UserController.store)
 }
 ```
 
-- [x] Atualizar cadastro
+- [x] Perfil usuário
+
+```java
+router.get('/profile/:idUser', auth, UserController.store)
+```
+
+- [x] Atualizar usuário
 
 ```java
 router.put('/users', auth, UserController.update)
 
 {
-	"name": "Caio Henrique Agiani Pimenta",
-	"email": "caio.agiani14@gmail.com",
-	"oldPassword": "123",
-	"password": "123"
+  "name": "Caio Henrique Agiani Pimenta",
+  "email": "caio.agiani14@gmail.com",
+  "oldPassword": "123",
+  "password": "123"
 }
+```
+
+- [x] Deslogar usuário
+
+```java
+router.get('/logout', auth, SessionController.destroy)
+```
+
+- [x] Deletar usuário
+
+```java
+router.delete('/users/:idUser', auth, UserController.delete);
 ```
 
 ## Contato
