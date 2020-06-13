@@ -36,9 +36,9 @@ Pacotes principais: **Express** responsável pela criação de rotas, Middleware
 router.post('/users', UserController.store)
 
 {
-     "name": "Caio",
-     "email": "caio.agiani14@gmail.com",
-     "password": "123123"
+  "name": "Caio",
+  "email": "caio.agiani14@gmail.com",
+  "password": "123123"
 }
 ```
 
@@ -48,8 +48,21 @@ router.post('/users', UserController.store)
 router.post('/users', UserController.store)
 
 {
-     "email": "caio.agiani14@gmail.com",
-     "password": "123123"
+  "email": "caio.agiani14@gmail.com",
+  "password": "123123"
+}
+```
+
+- [x] Atualizar cadastro
+
+```java
+router.put('/users', auth, UserController.update)
+
+{
+	"name": "Caio Henrique Agiani Pimenta",
+	"email": "caio.agiani14@gmail.com",
+	"oldPassword": "123",
+	"password": "123"
 }
 ```
 
