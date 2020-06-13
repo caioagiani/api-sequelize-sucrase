@@ -1,0 +1,126 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2020-06-13T16:54:55.913Z",
+  "__export_source": "insomnia.desktop.app:v2020.2.2",
+  "resources": [
+    {
+      "_id": "req_b4c3ea1d7a2e4acaae1db0dd83ee38a0",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"caio.agiani14@gmail.com\",\n\t\"password\": \"123123\"\n}"
+      },
+      "created": 1591910887139,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_a5bd3f1ad7e64b0983000f212bf5fbf3",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1591908628783,
+      "method": "POST",
+      "modified": 1592067247163,
+      "name": "Login",
+      "parameters": [],
+      "parentId": "fld_c0f3bc5baa4448718b5f9c5ced7709e8",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseurl  }}/session",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_c0f3bc5baa4448718b5f9c5ced7709e8",
+      "created": 1591908620616,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1591908620617,
+      "modified": 1591908620616,
+      "name": "Users",
+      "parentId": "wrk_7bdccc2cdbaf44698a64dcdf89da22ef",
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_7bdccc2cdbaf44698a64dcdf89da22ef",
+      "created": 1591889679676,
+      "description": "",
+      "modified": 1591889679676,
+      "name": "Sucrase -sequelize",
+      "parentId": null,
+      "scope": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_50286d414be14b0cad0c3928f1b4f325",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Caio\",\n\t\"email\": \"caio.agiani14@gmail.com\",\n\t\"password\": \"123123\"\n}"
+      },
+      "created": 1591908628733,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_da3eb248d7594d47b06b9ef5ee57ea6a",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1591908628733,
+      "method": "POST",
+      "modified": 1592067215018,
+      "name": "Create",
+      "parameters": [],
+      "parentId": "fld_c0f3bc5baa4448718b5f9c5ced7709e8",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseurl  }}/users",
+      "_type": "request"
+    },
+    {
+      "_id": "env_deee616e5596311004114e4524ab55304fbda78b",
+      "color": null,
+      "created": 1591889680253,
+      "data": { "baseurl": "localhost:3333" },
+      "dataPropertyOrder": { "&": ["baseurl"] },
+      "isPrivate": false,
+      "metaSortKey": 1591889680253,
+      "modified": 1591889722812,
+      "name": "Base Environment",
+      "parentId": "wrk_7bdccc2cdbaf44698a64dcdf89da22ef",
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_deee616e5596311004114e4524ab55304fbda78b",
+      "cookies": [],
+      "created": 1591889680263,
+      "modified": 1591889680263,
+      "name": "Default Jar",
+      "parentId": "wrk_7bdccc2cdbaf44698a64dcdf89da22ef",
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_4abde30101954e529d5cdfb10f6873a7",
+      "contentType": "yaml",
+      "contents": "",
+      "created": 1591889679689,
+      "fileName": "Sucrase -sequelize",
+      "modified": 1591889679689,
+      "parentId": "wrk_7bdccc2cdbaf44698a64dcdf89da22ef",
+      "_type": "api_spec"
+    }
+  ]
+}

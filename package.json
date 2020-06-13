@@ -1,8 +1,23 @@
 {
   "name": "api_sucrase_sequelize",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "description": "API RESTful Sucrase",
   "main": "index.js",
   "license": "MIT",
+  "keywords": [
+    "api",
+    "restful",
+    "sky"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caioagiani"
+  },
+  "author": {
+    "name": "Caio Agiani",
+    "email": "caio.agiani14@gmail.com",
+    "url": "https://www.linkedin.com/in/caioagiani"
+  },
   "scripts": {
     "start": "node dist/app",
     "dev": "nodemon -r dotenv/config src/app.js",
