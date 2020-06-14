@@ -26,7 +26,7 @@ class SessionController {
 
     user.update({ log: true });
 
-    res.json({ user: { id, name, email }, token });
+    return res.json({ user: { id, name, email }, token });
   }
 
   async destroy(req, res) {

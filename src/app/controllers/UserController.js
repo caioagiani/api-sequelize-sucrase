@@ -21,7 +21,7 @@ class UserController {
 
     const { id, name, email } = user;
 
-    res.json({ user: { id, name, email } });
+    return res.json({ user: { id, name, email } });
   }
 
   async store(req, res) {
@@ -35,7 +35,7 @@ class UserController {
 
     const { id } = await User.create({ name, email, password });
 
-    res.json({ id, name, email });
+    return res.json({ id, name, email });
   }
 
   async update(req, res) {
@@ -68,7 +68,7 @@ class UserController {
       email,
     });
 
-    res.json({ user: { id, name, email }, token });
+    return res.json({ user: { id, name, email }, token });
   }
 
   async delete(req, res) {
@@ -91,7 +91,7 @@ class UserController {
 
     await findUser.destroy();
 
-    res.json({ mensagem: 'Usuário deletado com sucesso.' });
+    return res.json({ mensagem: 'Usuário deletado com sucesso.' });
   }
 }
 

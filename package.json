@@ -22,7 +22,8 @@
     "start": "node dist/app",
     "dev": "nodemon -r dotenv/config src/app.js",
     "dev:build": "sucrase ./src -d ./dist --transforms imports",
-    "dev:fix": "eslint --fix src --ext .js"
+    "dev:fix": "eslint --fix src --ext .js",
+    "dev:jest": "jest --setupFiles dotenv/config --detectOpenHandles --forceExit"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
