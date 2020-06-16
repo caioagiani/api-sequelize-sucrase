@@ -19,9 +19,7 @@ class UserController {
       return res.status(400).json({ error: 'Necessário estar logado.' });
     }
 
-    const { id, name, email } = user;
-
-    res.json({ user: { id, name, email } });
+    res.json({ user });
   }
 
   async store(req, res) {
