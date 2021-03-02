@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="115" height="100%" src="https://www.elemental.co.za/blog/wp-content/uploads/2020/04/api-2x.png" alt="API RESTful"></a>
+  <img width="115" height="100%" src=".github/logo.png" alt="API RESTful"></a>
 </p>
 
 <h3 align="center">API RESTful - MySQL Sequelize :: Sucrase</h3>
@@ -20,11 +20,15 @@ Pacotes principais: **Express** responsável pela criação de rotas, Middleware
 ## Instalação:
 
 - Instalar dependência: `yarn install` ou `npm install`
+- Configurar variáveis ambiente: `cp .env.example .env`
+- Permissão de execução o script database: `sudo chmod +x src/scripts/database.sh`
+- Executar script database para configurar o banco: `yarn dev:db`
 - Iniciar banco de dados: `yarn sequelize db:migrate` ou import `api.sql`
 - Iniciar aplicação em desenvolvimento: `yarn dev`
+- Iniciar aplicação em produção: `yarn start`
+
 - Format eslint: `yarn dev:fix`
 - Buildar sucrase: `yarn dev:build`
-- Iniciar aplicação em produção: `yarn start`
 
 ## Rotas
 
