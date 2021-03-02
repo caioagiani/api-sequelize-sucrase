@@ -46,7 +46,7 @@
     "eslint-plugin-prettier": "3.3.1",
     "nodemon": "2.0.7",
     "prettier": "2.2.1",
-    "sequelize-cli": "5.5.1",
+    "sequelize-cli": "6.2.0",
     "sucrase": "3.17.1"
   },
   "peerDependencies": {
