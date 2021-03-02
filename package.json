@@ -50,6 +50,6 @@
     "sucrase": "^3.15.0"
   },
   "peerDependencies": {
-    "eslint": "2.x - 6.x"
+    "eslint": "2.x - 7.x"
   }
 }
