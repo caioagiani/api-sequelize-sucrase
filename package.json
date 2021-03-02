@@ -34,7 +34,7 @@
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.12",
-    "yup": "^0.29.1"
+    "yup": "^0.32.0"
   },
   "devDependencies": {
     "dotenv": "8.2.0",
