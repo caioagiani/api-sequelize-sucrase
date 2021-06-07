@@ -47,7 +47,7 @@
     "nodemon": "2.0.7",
     "prettier": "2.3.1",
     "sequelize-cli": "6.2.0",
-    "sucrase": "3.18.1"
+    "sucrase": "3.18.2"
   },
   "peerDependencies": {
     "eslint": "2.x - 7.x"
