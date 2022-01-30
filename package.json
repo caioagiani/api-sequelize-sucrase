@@ -37,7 +37,7 @@
     "yup": "^0.32.0"
   },
   "devDependencies": {
-    "dotenv": "10.0.0",
+    "dotenv": "14.3.2",
     "eslint": "8.8.0",
     "eslint-config-airbnb-base": "14.2.1",
     "eslint-config-prettier": "8.2.0",
