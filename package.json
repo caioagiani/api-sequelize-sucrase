@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "dotenv": "14.3.2",
-    "eslint": "8.8.0",
+    "eslint": "8.57.0",
     "eslint-config-airbnb-base": "14.2.1",
     "eslint-config-prettier": "8.2.0",
     "eslint-plugin-import": "2.23.4",
